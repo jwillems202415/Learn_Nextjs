@@ -1,3 +1,5 @@
+// This file contains all the data queries.
+
 import postgres from 'postgres';
 import {
   CustomerField,
@@ -10,6 +12,7 @@ import {
 import { formatCurrency } from './utils';
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
+// Queries the database
 
 export async function fetchRevenue() {
   try {
